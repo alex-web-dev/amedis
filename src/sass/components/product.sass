@@ -1,0 +1,359 @@
+.product
+  &__main
+    display: flex
+
+  &__sliders
+    position: relative
+    display: flex
+    height: 460px
+    flex: 0 0 calc(50% - 15px)
+
+  &__big-slider
+    flex: 1 1 auto
+    position: relative
+    background-color: $color-light
+    border-radius: 5px
+
+  &__big-slide
+    padding: 35px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    img
+      max-height: 100%
+      object-fit: cover
+
+  &__nav-wrapper
+    position: relative
+    margin-right: 30px
+    padding: 38px 0
+    flex: 0 0 auto
+
+  &__nav-slider
+    max-height: 100%
+
+  &__nav-slide
+    position: relative
+    width: 80px
+    height: 80px
+    padding: 12px
+    cursor: pointer
+    border-radius: 5px
+    background-color: $color-light
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+
+    &.swiper-slide-thumb-active
+      &:before
+        content: ''
+        z-index: 1
+        border: 1px solid $color-primary
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        border-radius: 5px
+
+  &__nav-next,
+  &__nav-prev
+    position: absolute
+    left: 50%
+    z-index: 1
+    transform: translateX(-50%)
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 20px
+
+    svg
+      width: 20px
+      height: 20px
+      stroke: #879299
+
+    &.swiper-button-disabled
+      cursor: default
+
+      svg
+        stroke: #D7DBDE
+
+  &__nav-prev
+    top: 0
+
+    svg
+      transform: rotate(-90deg)
+
+  &__nav-next
+    bottom: 0
+
+    svg
+      transform: rotate(90deg)
+
+  &__info
+    margin-left: 30px
+    flex: 0 0 calc(50% - 15px)
+
+  &__title
+    font-size: 30px
+    font-weight: 600
+    line-height: 1.4
+
+  &__details
+    &--info
+      margin-top: 32px
+
+  &__detail
+    position: relative
+    display: flex
+    justify-content: space-between
+    font-size: 15px
+    line-height: 1.4
+
+    &:before
+      content: ''
+      position: absolute
+      top: 16px
+      left: 0
+      width: 100%
+      border-bottom: 1px solid #d7dbde
+
+    &:not(:first-child)
+      margin-top: 14px
+
+  &__details--info &__detail-text
+    max-width: calc(100% - 170px)
+    width: auto
+
+  &__details--info &__detail-value
+    width: auto
+    max-width: 120px
+
+  &__detail-text
+    z-index: 1
+    background: #fff
+    line-height: 1.4
+    padding-right: 20px
+    max-width: calc(50% - 10px)
+
+  &__detail-value
+    z-index: 1
+    background: #fff
+    line-height: 1.4
+    padding-left: 20px
+    width: calc(50% - 10px)
+
+    span
+      display: inline-block
+      max-width: 460px
+
+  &__info-footer
+    margin-top: 40px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__tabs
+    margin-top: 60px
+
+  &__about
+    margin-top: 40px
+
+  &__texts
+    font-size: 15px
+    line-height: 1.5
+
+    p
+      &:not(:first-child)
+        margin-top: 15px
+
+    br + p
+      &:not(:first-child)
+        margin-top: 9px
+
+    ul
+      &:not(:first-child)
+        margin-top: 15px
+
+    li
+      &:not(:first-child)
+        margin-top: 8px
+
+  @media (max-width: 1140px)
+    &__sliders
+      height: 400px
+
+    &__nav-wrapper
+      padding: 30px 0
+
+    &__nav-slide
+      width: 70px
+      height: 70px
+
+    &__title
+      font-size: 28px
+
+    &__details
+      &--info
+        margin-top: 28px
+
+    &__info-footer
+      margin-top: 34px
+
+  @media (max-width: 991px)
+    &__main
+      flex-direction: column
+
+    &__sliders
+      flex: none
+      flex-direction: column
+
+    &__nav-wrapper
+      display: flex
+      justify-content: center
+      margin-top: 20px
+      margin-right: 0
+      padding: 0 25px
+      order: 2
+
+    &__nav-prev,
+    &__nav-next
+      width: 20px
+      top: 50%
+      transform: translateY(-50%)
+
+    &__nav-prev
+      left: 0
+
+      svg
+        transform: rotate(-180deg)
+
+    &__nav-next
+      right: 0
+      left: unset
+      bottom: unset
+
+      svg
+        transform: rotate(0)
+
+    &__info
+      margin-top: 30px
+      margin-left: 0
+      flex: none
+
+    &__title
+      font-size: 26px
+
+    &__detail
+      font-size: 14px
+
+      &:not(:first-child)
+        margin-top: 10px
+
+    &__detail-text
+      padding-right: 15px
+
+    &__detail-value
+      padding-left: 15px
+
+    &__tabs
+      margin-top: 45px
+
+    &__about
+      margin-top: 30px
+
+    &__texts
+      font-size: 14px
+
+      p
+        &:not(:first-child)
+          margin-top: 12px
+
+      br + p
+        &:not(:first-child)
+          margin-top: 4px
+
+      ul
+        &:not(:first-child)
+          margin-top: 12px
+
+      li
+        &:not(:first-child)
+          margin-top: 6px
+
+  @media (max-width: 767px)
+    &__title
+      font-size: 24px
+
+    &__details
+      &--info
+        margin-top: 22px
+
+    &__detail
+      margin: 0 -15px
+      padding: 7px 15px
+      font-size: 13px
+
+      &:before
+        display: none
+
+      &:nth-child(2n)
+        background-color: $color-light
+
+    &__detail-text
+      padding-right: 10px
+      width: calc(50% - 5px)
+      background-color: transparent
+
+    &__detail-value
+      padding-left: 10px
+      width: calc(50% - 5px)
+      background-color: transparent
+
+    &__tabs
+      margin-top: 35px
+
+  @media (max-width: 480px)
+    &__sliders
+      height: 380px
+
+    &__nav-wrapper
+      margin-top: 15px
+
+    &__info
+      margin-top: 24px
+
+    &__title
+      font-size: 22px
+
+    &__details
+      &--info
+        margin-top: 18px
+
+    &__detail-text
+      padding-right: 5px
+
+    &__detail-value
+      padding-left: 5px
+
+    &__details--info &__detail-text
+      max-width: calc(100% - 125px)
+
+    &__info-footer
+      flex-direction: column
+
+    &__btn
+      width: 100%
+
+    &__download
+      margin-top: 15px
+
+    &__about
+      margin-top: 20px
+
+    &__texts
+      font-size: 13px

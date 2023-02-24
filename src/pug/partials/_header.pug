@@ -1,0 +1,24 @@
+header.header
+	.container
+		.header__content
+			a.logo(href="#main")
+				img.logo__img(src="assets/img/logo.svg", alt="")
+
+			.menu.header__menu
+				.menu__content
+					ul.menu__list
+						li.menu__item
+							a.link.menu__link(href="#products") Продукция
+						li.menu__item
+							a.link.menu__link(href="#companies") Нам доверяют
+						li.menu__item
+							a.link.menu__link(href="#terms") Условия работы
+						li.menu__item
+							a.link.menu__link(href="#about") О компании
+						li.menu__item
+							a.link.menu__link(href="#news") Новости
+					.menu__contacts
+						a.link.menu__contact.menu__contact--bold(href="tel:+78005556201") 8 800 555 62 01
+						a.link.menu__contact(href="mailto:amedisin@gmail.com") amedisin@gmail.com
+				button.menu__toggle
+					span.menu__lines

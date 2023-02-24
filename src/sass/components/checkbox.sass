@@ -1,0 +1,51 @@
+.checkbox
+  display: flex
+  align-items: flex-start
+
+  &__input
+    display: none
+
+  &__switch
+    margin-top: 4px
+    position: relative
+    flex: 0 0 auto
+    width: 20px
+    height: 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 3px
+    background-color: #fff
+    text-align: center
+    cursor: pointer
+    border: 1px solid #d7dbde
+
+    svg
+      fill: #fff
+      display: none
+      width: 12px
+      height: 9px
+
+  &__input:checked ~ &__switch
+    background-color: $color-primary
+    border-color: $color-primary
+
+    svg
+      display: block
+
+  &__text
+    margin-left: 12px
+    font-size: 15px
+    line-height: 1.4
+    color: $color-gray
+    user-select: none
+
+  @media (max-width: 991px)
+    &__text
+      margin-left: 10px
+      font-size: 14px
+
+  @media (max-width: 767px)
+    &__text
+      margin-left: 8px
+      font-size: 13px

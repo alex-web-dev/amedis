@@ -1,0 +1,88 @@
+.letters
+  padding-bottom: 140px
+  background-color: $color-light
+
+  &__header
+    margin-bottom: 40px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__controls
+    margin-left: 15px
+    display: flex
+    flex: 0 0 auto
+
+  &__slider
+    margin: -12px
+    padding: 12px
+
+  &__slide
+    position: relative
+    padding-top: 33.1%
+    cursor: pointer
+
+    img
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      max-height: 100%
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.07)
+      border-radius: 5px
+      object-fit: contain
+
+  &__backdrop
+    position: absolute
+    left: 0
+    top: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+    background-color: rgba($color-primary-dark, 0.8)
+    border-radius: 5px
+    opacity: 0
+    visibility: hidden
+    transition: opacity .4s, visibility .4s
+
+  &__slide:hover &__backdrop
+    opacity: 1
+    visibility: visible
+
+  &__backdrop-btn
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 50px
+    height: 50px
+    border: 1px solid #fff
+    border-radius: 50%
+
+    svg
+      width: 16px
+      height: 16px
+      stroke: #fff
+
+  @media (max-width: 1320px)
+    padding-bottom: 110px
+
+  @media (max-width: 991px)
+    padding-bottom: 70px
+
+    &__header
+      margin-bottom: 30px
+
+    &__slide
+      padding-top: 45%
+
+  @media (max-width: 767px)
+    padding-bottom: 55px
+
+  @media (max-width: 640px)
+    &__header
+      margin-bottom: 25px
+
+    &__slide
+      padding-top: 68%

@@ -1,0 +1,359 @@
+.popup(data-name="callback")
+    .popup__content
+        form.form.popup__form(action="#" method="POST" autocomplete="off")
+            .title1.form__title Запросить цену
+            .text.text--gray.form__text Наши специалисты свяжутся с вами в ближайшее время и ответят на все интересующие вопросы
+            .form__item
+                .select.form__select
+                    select.select__field
+                        option(value="" disabled selected hidden) Выберите продукт
+                        option(value="1") Стерилизаторы
+                        option(value="1") Комплектующие
+                    +icon('next', 'select__icon')
+            .form__item
+                input.input.form__input(type="text" placeholder="Контактное лицо")
+            .form__items
+                .form__item
+                    input.input.form__input(type="text" placeholder="Организация")
+                .form__item
+                    input.input.form__input(type="text" placeholder="Город")
+            .form__items
+                .form__item
+                    input.input.form__input(type="text" placeholder="E-mail")
+                .form__item
+                    input.input.form__input(type="text" placeholder="Телефон")
+            .form__item
+                input.input.form__input(type="text" placeholder="Сообщение")
+            label.checkbox.form__checkbox
+                input.checkbox__input(type="checkbox")
+                span.checkbox__switch
+                    +icon('check')
+                span.checkbox__text Согласие на обработку персональных данных, а также согласие с политикой конфиденциальности
+            button.btn.form__btn.form__btn--full Отправить запрос
+        button.popup__close
+            +icon('close')
+    .popup__backdrop
+
+.popup.popup--full(data-name="product-1")
+    .popup__content
+        .product
+            .container
+                .product__content
+                    .product__main
+                        .product__sliders
+                            .product__nav-wrapper
+                                .product__nav-slider.swiper
+                                    .swiper-wrapper
+                                        .swiper-slide.product__nav-slide
+                                            img(src="assets/img/products/1/1.png" alt="")
+                                        .swiper-slide.product__nav-slide
+                                            img(src="assets/img/products/1/2.png" alt="")
+                                        .swiper-slide.product__nav-slide
+                                            img(src="assets/img/products/1/3.png" alt="")
+                                        .swiper-slide.product__nav-slide
+                                            img(src="assets/img/products/1/4.png" alt="")
+                                button.product__nav-next
+                                    +icon('next')
+                                button.product__nav-prev
+                                    +icon('next')
+                            .product__big-slider.swiper
+                                .swiper-wrapper
+                                    .swiper-slide.product__big-slide
+                                        img(src="assets/img/products/1/1.png" alt="")
+                                    .swiper-slide.product__big-slide
+                                        img(src="assets/img/products/1/2.png" alt="")
+                                    .swiper-slide.product__big-slide
+                                        img(src="assets/img/products/1/3.png" alt="")
+                                    .swiper-slide.product__big-slide
+                                        img(src="assets/img/products/1/4.png" alt="")
+                        .product__info
+                            .product__title Стерилизатор паровой вертикальный автоматический СПВА-75-1-НН
+                            .product__details.product__details--info
+                                .product__detail.product__detail--info
+                                    .product__detail-text 
+                                        span Объем камеры
+                                    .product__detail-value
+                                        span 75 л
+                                .product__detail.product__detail--info
+                                    .product__detail-text 
+                                        span Размер стерилизационной камеры (диаметр х глубина)
+                                    .product__detail-value
+                                        span 400х605 мм
+                                .product__detail.product__detail--info
+                                    .product__detail-text 
+                                        span Максимальная температура пара
+                                    .product__detail-value
+                                        span +134°С
+                            .product__info-footer
+                                button.btn.product__btn.js-open-popup(data-popup-name="callback") Запросить цену
+                                a.link-icon.product__download(href="#") 
+                                    +icon('pdf', 'link-icon__img')
+                                    span Скачать описание
+                    .tabs.product__tabs
+                        .tabs__btns
+                            button.tabs__btn.tabs__btn--active Характеристики
+                            button.tabs__btn Описание
+                            button.tabs__btn Расширенная гарантия
+                        .tabs__list
+                            .tabs__item.tabs__item--active
+                                .product__about
+                                    .product__details.product__details--about
+                                        .product__detail
+                                            .product__detail-text
+                                                span Объем камеры
+                                            .product__detail-value
+                                                span 75 л
+                                        .product__detail
+                                            .product__detail-text
+                                                span Размер стерилизационной камеры (диаметр х глубина)
+                                            .product__detail-value
+                                                span 400х605 мм
+                                        .product__detail
+                                            .product__detail-text
+                                                span Максимальная температура пара
+                                            .product__detail-value
+                                                span +134°С
+                                        .product__detail
+                                            .product__detail-text
+                                                span Точность поддерживаемой температуры стерилизации
+                                            .product__detail-value
+                                                span +3°С
+                                        .product__detail
+                                            .product__detail-text
+                                                span Режим 1 (температура \ давление \ время выдержки)
+                                            .product__detail-value
+                                                span от 105 до 134+3 °С \ 0,019-0,230 МПа \ от 1 до 180 мин. #[br] (стерилизация растворов: ручной набор)
+                                        .product__detail
+                                            .product__detail-text
+                                                span Режим 2 (температура \ давление \ время выдержки)
+                                            .product__detail-value
+                                                span 121+3 °С \ 0,103-0,124 МПа \ 20 мин.
+                                        .product__detail
+                                            .product__detail-text
+                                                span Режим 3 (температура \ давление \ время выдержки)
+                                            .product__detail-value
+                                                span 126+3 °С \ 0,138-0,161 МПа \ 10 мин.
+                                        .product__detail
+                                            .product__detail-text
+                                                span Режим 4 (температура \ давление \ время выдержки)
+                                            .product__detail-value
+                                                span 134+3 °С \ 0,203-0,230 МПа \ 5 мин.
+                                        .product__detail
+                                            .product__detail-text
+                                                span Режим 5 (температура \ давление \ время выдержки)
+                                            .product__detail-value
+                                                span от 105 до 134+3 °С \ 0,019-0,230 МПа \ 1-180 мин. #[br] (стерилизация инструмента: ручной набор)
+                                        .product__detail
+                                            .product__detail-text
+                                                span Режим 6 Тест «Бови-Дика» (температура \ давление \ время выдержки)
+                                            .product__detail-value
+                                                span 134+3 °С \ 0,203-0,230 МПа \ 3,5 мин.
+                                        .product__detail
+                                            .product__detail-text
+                                                span Режим 7 (температура-давление-время выдержки)
+                                            .product__detail-value
+                                                span 101+3 °С \ 0,005-0,015 МПа \ от 1 до 180 мин. #[br] («Стерилизация текучим паром». Необходима дополнительная установка устройства для «стерилизации текучим паром»)
+                                        .product__detail
+                                            .product__detail-text
+                                                span Максимальное давление водяного пара в камере
+                                            .product__detail-value
+                                                span 2,3 кг/см2 (0,23 МПа)
+                                        .product__detail
+                                            .product__detail-text
+                                                span Напряжение
+                                            .product__detail-value
+                                                span 380±38 В 
+                                        .product__detail
+                                            .product__detail-text
+                                                span Частота
+                                            .product__detail-value
+                                                span 50 Гц 
+                                        .product__detail
+                                            .product__detail-text
+                                                span Мощность
+                                            .product__detail-value
+                                                span 10 кВт 
+                                        .product__detail
+                                            .product__detail-text
+                                                span Время перехода в рабочий режим
+                                            .product__detail-value
+                                                span 30 минут 
+                                        .product__detail
+                                            .product__detail-text
+                                                span Число коробок КСКФ-21 в камере
+                                            .product__detail-value
+                                                span 3 шт. 
+                                        .product__detail
+                                            .product__detail-text
+                                                span Габариты
+                                            .product__detail-value
+                                                span 560х660х1110 мм 
+                                        .product__detail
+                                            .product__detail-text
+                                                span Масса
+                                            .product__detail-value
+                                                span 140 кг 
+                            .tabs__item
+                                .product__about
+                                    .product__texts
+                                        p Стерилизатор паровой вертикальный автоматический форвакуумный СПВА-75-1-НН объемом 75 литров.
+                                        p
+                                            b Тип: 
+                                            | вертикальный.
+                                        p
+                                            b Технология: 
+                                            | стерилизация насыщенным водяным паром под высоким давлением.
+                                        p Стерилизатор паровой СПВА-75-1-НН - форвакуумный, стерилизация осуществляется за счет предварительного вакуума и дальнейшей вакуумной сушки.
+                                        p
+                                            b Варианты исполнения: 
+                                            | кнопочное или сенсорное управление; с подъемным устройством и без; с печатающим устройством и без.
+                                        p
+                                            b Управление стерилизационными режимами: 
+                                            | автоматическое микропроцессорное (со стандартными предустановленными параметрами) или ручное (возможность программирования режимов).
+                            .tabs__item 
+                                .product__about
+                                    .product__texts
+                                        p ООО «Амедис Инжиниринг» совместно с крупнейшим производителем паровых стерилизаторов АО «Транс-Сигнал» предлагают новую программу «Расширенная гарантия» с максимальным сроком гарантии до 5 лет. Паровые стерилизаторы производства АО «Транс-Сигнал» будучи сложными электронно-техническими устройствами требуют проведения технического обслуживания в течение всего срока эксплуатации. Новая программа позволит обеспечить бесперебойность работы оборудования и снизить затраты при эксплуатации.
+                                        br
+                                        p
+                                            b Расширенная гарантия сроком до 5 лет включает в себя:
+                                        ul
+                                            li — Диагностику состояния и неисправностей
+                                            li — Предоставление и замену запасных частей
+                                            li — Ремонт, поддержание работоспособности
+                                            li — Консультации по вопросам эксплуатации
+                                        br
+                                        p ООО «Амедис Инжиниринг» работает по всей территории РФ и сотрудничает только с авторизованными сервисными центрами, имеющими соответствующие подтверждения полномочий от АО «Транс-Сигнал».
+                                        p Программа распространяется на стерилизаторы, введенные в эксплуатацию в 2022 году. Стоимость расширенной гарантии ориентировочно составляет 90 000 рублей в год.
+    button.popup__close
+        +icon('close')
+    .popup__backdrop
+
+.popup.popup--full(data-name="product-2")
+    .popup__content
+        .product
+            .container
+                .product__content
+                    .product__main
+                        .product__sliders
+                            .product__nav-wrapper
+                                .product__nav-slider.swiper
+                                    .swiper-wrapper
+                                        .swiper-slide.product__nav-slide
+                                            img(src="assets/img/products/11/1.png" alt="")
+                                        .swiper-slide.product__nav-slide
+                                            img(src="assets/img/products/11/2.png" alt="")
+                                        .swiper-slide.product__nav-slide
+                                            img(src="assets/img/products/11/3.png" alt="")
+                                        .swiper-slide.product__nav-slide
+                                            img(src="assets/img/products/11/4.png" alt="")
+                                button.product__nav-next
+                                    +icon('next')
+                                button.product__nav-prev
+                                    +icon('next')
+                            .product__big-slider.swiper
+                                .swiper-wrapper
+                                    .swiper-slide.product__big-slide
+                                        img(src="assets/img/products/11/1.png" alt="")
+                                    .swiper-slide.product__big-slide
+                                        img(src="assets/img/products/11/2.png" alt="")
+                                    .swiper-slide.product__big-slide
+                                        img(src="assets/img/products/11/3.png" alt="")
+                                    .swiper-slide.product__big-slide
+                                        img(src="assets/img/products/11/4.png" alt="")
+                        .product__info
+                            .product__title Парогаситель к паровым стерилизаторам НКМР.494721.001
+                            .product__details.product__details--info
+                                .product__detail.product__detail--info
+                                    .product__detail-text 
+                                        span Питающее напряжение
+                                    .product__detail-value
+                                        span 220 В
+                                .product__detail.product__detail--info
+                                    .product__detail-text 
+                                        span Частота сети
+                                    .product__detail-value
+                                        span 50 Гц
+                                .product__detail.product__detail--info
+                                    .product__detail-text 
+                                        span Потребляемая мощность
+                                    .product__detail-value
+                                        span 5 Вт
+                            .product__info-footer
+                                button.btn.product__btn.js-open-popup(data-popup-name="callback") Запросить цену
+                                a.link-icon.product__download(href="#") 
+                                    +icon('pdf', 'link-icon__img')
+                                    span Скачать описание
+                    .tabs.product__tabs
+                        .tabs__btns
+                            button.tabs__btn.tabs__btn--active Характеристики
+                            button.tabs__btn Описание
+                        .tabs__list
+                            .tabs__item.tabs__item--active
+                                .product__about
+                                    .product__details.product__details--about
+                                        .product__detail
+                                            .product__detail-text
+                                                span Питающее напряжение
+                                            .product__detail-value
+                                                span 220 В
+                                        .product__detail
+                                            .product__detail-text
+                                                span Частота сети
+                                            .product__detail-value
+                                                span 50 Гц
+                                        .product__detail
+                                            .product__detail-text
+                                                span Потребляемая мощность
+                                            .product__detail-value
+                                                span 5 Вт
+                                        .product__detail
+                                            .product__detail-text
+                                                span Диаметр входной трубы
+                                            .product__detail-value
+                                                span 1/2"
+                                        .product__detail
+                                            .product__detail-text
+                                                span Диаметр выходной трубы
+                                            .product__detail-value
+                                                span 1/2"
+                                        .product__detail
+                                            .product__detail-text
+                                                span Диаметр трубы для подключения воды
+                                            .product__detail-value
+                                                span 3/4"
+                                        .product__detail
+                                            .product__detail-text
+                                                span Максимальное давление пара
+                                            .product__detail-value
+                                                span 3,5 кг/см2
+                                        .product__detail
+                                            .product__detail-text
+                                                span Максимальное давление воды
+                                            .product__detail-value
+                                                span 6 кг/см2
+                                        .product__detail
+                                            .product__detail-text
+                                                span Масса
+                                            .product__detail-value
+                                                span 2 кг
+                            .tabs__item
+                                .product__about
+                                    .product__texts
+                                        p
+                                            | Парогаситель для паровых стерилизаторов.
+                                            br
+                                            b Назначение:
+                                            | гашение сбрасываемого стерилизатором в канализацию пара.
+
+                                        p
+                                            b Комплектация парогасителя
+                                        ul
+                                            li — Муфта длинная 15-Ц, L = 36 мм (ГОСТ 8954 –75)
+                                            li — Контргайка 15-Ц (ГОСТ 8968 – 75)
+                                            li — Труба (НТЦ 1919)
+                                            li — Переходник 1/2" – 3/4"
+                                            li — Шланг для воды от стиральной машины, L = 1,5 м, гайка 3/4
+    button.popup__close
+        +icon('close')
+    .popup__backdrop

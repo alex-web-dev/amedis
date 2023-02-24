@@ -1,0 +1,95 @@
+.popup
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 30
+  width: 100%
+  height: 100%
+  visibility: hidden
+  opacity: 0
+  transition: visibility .3s, opacity .3s
+
+  &__content
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    z-index: 1
+    padding: 50px 65px
+    background: #FFFFFF
+    border-radius: 5px
+    width: 760px
+    max-width: calc(100vw - 30px)
+    max-height: calc(100vh - 30px)
+    overflow-y: auto
+
+  &__close
+    position: absolute
+    top: 20px
+    right: 20px
+    z-index: 1
+    width: 55px
+    height: 55px
+
+    svg
+      width: 21px
+      height: 21px
+      stroke: $color-dark
+
+  &__backdrop
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background: rgba(#36404c, 0.9)
+
+  &--full
+    z-index: 29
+
+  &--full &__content
+    left: 0
+    top: 0
+    padding: 60px 0
+    width: 100%
+    height: 100%
+    max-width: none
+    max-height: none
+    transform: translate(0, 0)
+    border-radius: 0
+
+  &--show
+    opacity: 1
+    visibility: visible
+
+  @media (max-width: 991px)
+    &__content
+      padding: 30px 35px
+      width: 640px
+
+    &__title
+      font-size: 32px
+
+    &__close
+      right: 5px
+      top: 5px
+
+  @media (max-width: 767px)
+    &__content
+      padding: 30px 20px
+
+    &__title
+      font-size: 28px
+
+    &__close
+      width: 40px
+      height: 40px
+
+      svg
+        width: 16px
+        height: 16px
+
+    &--full &__content
+      padding: 50px 0 35px

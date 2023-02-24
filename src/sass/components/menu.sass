@@ -1,0 +1,151 @@
+.menu
+  &__content
+    display: flex
+    justify-content: space-between
+
+  &__list
+    margin: 0 auto
+    list-style-type: none
+    display: flex
+    align-items: center
+
+  &__item
+    position: relative
+
+    &:not(:first-child)
+      margin-left: 35px
+
+  &__link
+    font-weight: 500
+    color: $color-text
+
+    &:hover
+      color: $color-gray
+
+  &__contact
+    color: $color-dark
+    font-weight: 500
+
+    &:hover
+      color: $color-gray
+
+    &:not(:first-child)
+      margin-left: 40px
+
+    &--bold
+      font-weight: 700
+
+  &__toggle
+    height: 24px
+    display: none
+
+  &__lines
+    position: relative
+    z-index: 6
+
+    &,
+    &:before,
+    &:after
+      height: 1.5px
+      background-color: $color-dark
+      display: block
+      transform: rotate(0)
+      width: 24px
+      transition: transform 0.3s, width 0.3s
+
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      right: 0
+
+    &:before
+      transform: translateY(-7px)
+
+    &:after
+      transform: translateY(7px)
+
+  @media (max-width: 1320px)
+    &__item
+      &:not(:first-child)
+        margin-left: 20px
+
+    &__link
+      font-size: 15px
+
+    &__contact
+      font-size: 15px
+
+      &:not(:first-child)
+        margin-left: 20px
+
+  @media (max-width: 1140px)
+    &__item
+      &:not(:first-child)
+        margin-left: 12px
+
+    &__contact
+      &:not(:first-child)
+        margin-left: 15px
+
+  @media (max-width: 991px)
+    position: relative
+
+    &__content
+      position: fixed
+      z-index: 3
+      left: 0
+      top: 0
+      padding: 70px 24px 30px
+      flex-direction: column
+      justify-content: flex-start
+      width: 100%
+      height: 100%
+      background: #fff
+      transform: translateX(100%)
+      opacity: 0
+      visibility: hidden
+      overflow-y: auto
+      transition: opacity 0.4s, visibility 0.4s, transform 0.4s
+
+    &__list
+      justify-content: flex-start
+      align-items: center
+      flex-direction: column
+
+    &__item
+      margin: 12px 0
+
+      &:not(:last-child)
+        margin-right: 0
+
+    &__link
+      line-height: 1
+
+    &__contacts
+      margin-top: 50px
+      display: flex
+      align-items: center
+      flex-direction: column
+
+    &__contact
+      &:not(:first-child)
+        margin-left: 0
+        margin-top: 20px
+
+    &__toggle
+      display: block
+
+    &--active &__content
+      visibility: visible
+      opacity: 1
+      transform: translateX(0)
+
+    &--active &__lines
+      height: 0
+
+    &--active &__lines:before
+      transform: rotate(-45deg)
+
+    &--active &__lines:after
+      transform: rotate(45deg)

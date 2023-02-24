@@ -1,0 +1,31 @@
+.features
+  padding: 140px 0
+  background-color: $color-light
+
+  &__list
+    &:not(:first-child)
+      margin-top: 50px
+
+  &__item
+    &:last-child
+      padding-bottom: 0
+
+  @media (max-width: 1320px)
+    padding: 110px 0
+
+  @media (max-width: 1140px)
+    padding: 90px 0
+
+  @media (max-width: 991px)
+    padding: 120px 0 75px
+
+    &__list
+      &:not(:first-child)
+        margin-top: 30px
+
+  @media (max-width: 767px)
+    padding: 50px 0
+
+    &__list
+      &:not(:first-child)
+        margin-top: 25px

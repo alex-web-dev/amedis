@@ -1,0 +1,24 @@
+.header
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 20
+  padding: 18px 0
+  width: 100%
+  background-color: #fff
+  border-bottom: 1px solid $color-light
+
+  &__content
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__menu
+    flex: 1 1 auto
+
+  @media (max-width: 991px)
+    &__menu
+      flex: none
+
+  @media (max-width: 767px)
+    padding: 12px 0

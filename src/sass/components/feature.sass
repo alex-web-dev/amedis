@@ -1,0 +1,47 @@
+.feature
+  padding: 30px 0
+  border-top: 1px solid #D7DBDE
+  display: flex
+
+  &__num
+    flex: 0 0 110px
+    font-size: 21px
+    font-weight: 500
+    color: $color-primary
+
+  &__title
+    padding-right: 15px
+    flex: 0 0 43%
+    font-size: 21px
+    font-weight: 500
+
+  &__text
+    flex: 1 1 auto
+
+  @media (max-width: 1140px)
+    &__num
+      flex: 0 0 80px
+
+    &__title
+      flex: 0 0 30%
+
+  @media (max-width: 991px)
+    padding: 25px 0
+
+    &__num
+      font-size: 19px
+    
+    &__title
+      font-size: 19px
+
+  @media (max-width: 767px)
+    flex-wrap: wrap
+
+    &__num
+      flex: 0 0 40px
+
+    &__title
+      flex: 0 0 calc(100% - 40px)
+
+    &__text
+      margin-top: 15px

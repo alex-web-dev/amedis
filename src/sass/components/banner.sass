@@ -1,0 +1,69 @@
+.banner
+  padding: 86px 0 116px
+
+  &__content
+    position: relative
+    display: flex
+
+  &__info
+    width: 60%
+    max-width: 558px
+
+  &__text
+    margin-top: 25px
+    max-width: 376px
+
+  &__btn
+    margin-top: 30px
+
+  &__products
+    position: absolute
+    top: 0
+    right: 0
+
+  @media (max-width: 1140px)
+    padding: 65px 0 90px
+
+    &__products
+      top: 30px
+
+  @media (max-width: 991px)
+    padding: 50px 0 75px
+
+    &__text
+      margin-top: 20px
+
+    &__btn
+      margin-top: 25px
+
+    &__products
+      top: 90px
+      right: 5px
+
+  @media (max-width: 767px)
+    padding: 35px 0 60px
+
+    &__content
+      flex-direction: column
+
+    &__info
+      width: 100%
+      max-width: 540px
+
+    &__text
+      margin-top: 15px
+
+    &__btn
+      margin-top: 20px
+
+    &__products
+      position: relative
+      top: unset
+      right: unset
+      margin-top: 70px
+      margin-right: 12px
+      height: 320px
+
+  @media (max-width: 480px)
+    &__products
+      height: 270px

@@ -1,0 +1,190 @@
+.product-card
+  padding: 30px
+  display: flex
+  flex-direction: column
+  background: $color-light
+  border-radius: 5px
+  cursor: pointer
+
+  &:hover &__name
+    color: $color-gray
+
+  &:hover &__text
+    color: $color-gray
+
+  &__img
+    width: 100%
+    height: 268px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    img
+      max-height: 100%
+
+  &__slider
+    padding-bottom: 20px
+    width: 235px
+    height: 250px
+    flex: 0 0 auto
+    display: flex
+
+    .swiper-slide
+      background: $color-light
+      display: flex
+      align-items: center
+      justify-content: center
+
+      img
+        max-height: 100%
+
+    .swiper-pagination-bullets.swiper-pagination-horizontal
+      bottom: 0
+
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+      margin: 0
+
+    .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination--clone .swiper-pagination-bullet
+      margin: 0 3px
+
+  &__pagination
+    position: absolute
+    display: flex
+    height: 100%
+    width: 100%
+
+    .swiper-pagination-bullet
+      margin: 0
+      flex: 1 1 100%
+      height: 100%
+      background: none
+      z-index: 10
+      border-radius: 0
+      cursor: default
+
+    &.swiper-pagination--clone
+      display: flex
+      justify-content: center
+      pointer-events: none
+      align-items: flex-end
+
+      .swiper-pagination-bullet
+        flex: none
+        width: 10px
+        height: 4px
+        background-color: #d9d9d9
+        border-radius: 5px
+
+        &-active
+          background-color: $color-gray
+
+  &__info
+    margin-top: 20px
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+
+  &__text
+    transition: color .3s
+
+    &:not(:last-child)
+      margin-bottom: 15px
+
+    button
+      text-align: left
+
+  &__name
+    transition: color .3s
+    
+    &:not(:first-child)
+      margin-top: auto
+
+    button
+      font-weight: 600
+      text-align: left
+
+  &__btn
+    margin-top: 27px
+
+  &--row
+    padding-bottom: 40px
+    flex-direction: row
+    align-items: center
+
+  &--row &__img
+    width: 235px
+    height: 230px
+    flex: 0 0 auto
+
+  &--row &__info
+    margin-left: 53px
+    flex: 1 1 auto
+
+  @media (max-width: 1320px)
+    padding: 25px
+
+    &__slider
+      width: 220px
+      height: 240px
+
+    &--row &__info
+      margin-top: 0
+      margin-left: 30px
+
+  @media (max-width: 1140px)
+    padding: 20px
+
+    &__slider
+      width: 170px
+      height: 210px
+
+    &--row &__info
+      margin-left: 25px
+
+  @media (max-width: 991px)
+    &__slider
+      margin-bottom: 20px
+
+    &__img
+      height: 235px
+
+    &--row
+      flex-direction: column
+
+    &--row &__info
+      margin-left: 0
+
+  @media (max-width: 767px)
+    &__slider
+      width: 100%
+
+      .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+        margin: 0 3px
+
+    &__pagination
+      height: auto
+      display: flex
+      justify-content: center
+      align-items: flex-end
+
+      .swiper-pagination-bullet
+        flex: none
+        width: 10px
+        height: 4px
+        background-color: #d9d9d9
+        border-radius: 5px
+        cursor: pointer
+
+        &-active
+          background-color: $color-gray
+
+      &.swiper-pagination--clone
+        display: none
+
+    &__text
+      &:not(:last-child)
+        margin-bottom: 12px
+
+  @media (max-width: 640px)
+    &__img
+      height: 210px

@@ -1,0 +1,108 @@
+.companies
+  padding: 140px 0 83px
+  background-color: $color-light
+
+  &__title
+    margin-bottom: 50px
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    width: 25%
+    border-style: solid
+    border-color: #d0d7db
+    border-width: 1px 0px 0px 1px
+
+    &:nth-child(4n + 1)
+      border-left-color: transparent
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-last-child(1),
+    &:nth-last-child(2),
+    &:nth-last-child(3),
+    &:nth-last-child(4)
+      .companies__item-img
+        padding-top: 46.5%
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4)
+      border-top-color: transparent
+
+  &__item-img
+    position: relative
+    padding-top: 56%
+
+    img
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+
+  @media (max-width: 1320px)
+    padding: 110px 0 65px
+
+  @media (max-width: 1140px)
+    &__item
+      width: calc(100% / 3)
+      border-width: 1px 0px 0px 1px
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-last-child(1),
+      &:nth-last-child(2),
+      &:nth-last-child(3),
+      &:nth-last-child(4)
+        .companies__item-img
+          padding-top: 56%
+
+      &:nth-child(4)
+        border-top-color: #d0d7db
+
+      &:nth-child(4n + 1)
+        border-left-color: #d0d7db
+
+      &:nth-child(3n + 1)
+        border-left-color: transparent
+
+  @media (max-width: 991px)
+    padding: 70px 0 50px
+
+    &__title
+      margin-bottom: 35px
+
+  @media (max-width: 840px)
+    &__item
+      width: calc(50%)
+      border-width: 1px 0px 0px 1px
+
+      &:nth-child(3)
+        border-top-color: #d0d7db
+
+      &:nth-child(2n)
+        border-left-color: #d0d7db
+
+      &:nth-child(2n + 1)
+        border-left-color: transparent
+
+  @media (max-width: 767px)
+    padding: 55px 0 40px
+
+    &__title
+      margin-bottom: 25px
+
+  @media (max-width: 620px)
+    &__item-img
+      transform: scale(0.7)
+
+  @media (max-width: 480px)
+    &__item-img
+      transform: scale(0.5)

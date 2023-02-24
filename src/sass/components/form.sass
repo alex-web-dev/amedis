@@ -1,0 +1,93 @@
+.form
+  &__title
+    font-size: 36px
+
+  &__text
+    line-height: 1.4
+
+    &:not(:first-child)
+      margin-top: 16px
+
+  &__items
+    display: flex
+
+    &:not(:first-child)
+      margin-top: 25px
+
+  &__item
+    &:not(:first-child)
+      margin-top: 25px
+
+  &__items &__item
+    flex: 1 1 auto
+
+    &:not(:first-child)
+      margin-left: 30px
+      margin-top: 0
+
+  &__input,
+  &__select
+    width: 100%
+
+  &__checkbox
+    margin-top: 32px
+    max-width: 440px
+
+  &__btn
+    margin-top: 40px
+
+    &--full
+      width: 100%
+
+  @media (max-width: 1140px)
+    &__items
+      &:not(:first-child)
+        margin-top: 20px
+
+    &__item
+      &:not(:first-child)
+        margin-top: 20px
+
+    &__checkbox
+      margin-top: 24px
+
+    &__btn
+      margin-top: 32px
+
+  @media (max-width: 991px)
+    &__title
+      font-size: 32px
+
+    &__text
+      &:not(:first-child)
+        margin-top: 12px
+
+  @media (max-width: 767px)
+    &__title
+      font-size: 26px
+      
+    &__items &__item
+      &:not(:first-child)
+        margin-left: 20px
+
+  @media (max-width: 480px)
+    &__items
+      flex-direction: column
+
+      &:not(:first-child)
+        margin-top: 15px
+
+    &__item
+      &:not(:first-child)
+        margin-top: 15px
+
+    &__items &__item
+      &:not(:first-child)
+        margin-left: 0
+        margin-top: 15px
+
+    &__checkbox
+      margin-top: 20px
+
+    &__btn
+      margin-top: 24px

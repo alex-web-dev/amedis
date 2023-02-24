@@ -1,0 +1,11 @@
+import './menu.js';
+import './header.js';
+import './video-player.js';
+import './products.js';
+import './product-card.js';
+import './letters.js';
+import './igallery.js';
+import './smooth-scroll.js';
+import './popup.js';
+import './product.js';
+import './tabs.js';

@@ -1,0 +1,48 @@
+.term
+  padding: 35px 35px 40px 40px
+  border: 1px solid #D7DBDE
+  border-radius: 5px
+
+  &__icon
+    margin-bottom: 23px
+    width: 55px
+    height: 55px
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__title
+    min-height: 62px
+
+  &__text
+    margin-top: 15px
+
+  @media (max-width: 1320px)
+    padding: 30px 30px 35px 35px
+
+  @media (max-width: 1140px)
+    padding: 25px
+
+    &__icon
+      margin-bottom: 16px
+      width: 45px
+      height: 45px
+
+    &__title
+      min-height: 57px
+
+    &__text
+      margin-top: 12px
+
+  @media (max-width: 991px)
+    &__title
+      min-height: 52px
+
+  @media (max-width: 640px)
+    text-align: center
+
+    &__icon
+      margin: 0 auto 12px
+
+    &__title
+      min-height: auto

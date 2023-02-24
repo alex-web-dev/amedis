@@ -1,0 +1,74 @@
+.products
+  &__title
+    margin-bottom: 50px
+
+  &__list-header
+    margin-bottom: 36px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__controls
+    display: flex
+
+  &__list
+    margin: -15px
+    display: flex
+    flex-wrap: wrap
+
+  &__list ~ &__list-header
+    padding-top: 75px
+
+  &__item
+    margin: 15px
+    width: calc(25% - 30px)
+
+    &--col-6
+      width: calc(50% - 30px)
+
+  &__slider
+    user-select: none
+    
+    .swiper-slide
+      height: auto
+      
+  &__slide-item
+    height: 100%
+
+  @media (max-width: 1320px)
+    &__item
+      width: calc(100% / 3 - 30px)
+
+      &--col-6
+        width: calc(50% - 30px)
+
+  @media (max-width: 991px)
+    &__title
+      margin-bottom: 30px
+
+    &__list-header
+      margin-bottom: 28px
+
+    &__list
+      margin: -10px
+
+    &__list ~ &__list-header
+      padding-top: 50px
+
+    &__item
+      margin: 10px
+      width: calc(50% - 20px)
+
+  @media (max-width: 767px)
+    &__title
+      margin-bottom: 20px
+
+    &__list-header
+      margin-bottom: 20px
+
+    &__list ~ &__list-header
+      padding-top: 35px
+
+  @media (max-width: 640px)
+    &__item
+      width: calc(100% - 20px)

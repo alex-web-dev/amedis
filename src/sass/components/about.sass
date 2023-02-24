@@ -1,0 +1,120 @@
+.about
+  padding: 140px 0 150px
+
+  &__title
+    margin-bottom: 60px
+
+  &__img
+    margin-bottom: 70px
+    border-radius: 5px
+    object-fit: cover
+
+  &__main
+    h3
+      @extend .title3
+
+      &:not(:last-child)
+        margin-bottom: 30px
+
+    p
+      @extend .text
+      color: $color-gray
+
+      &:not(:first-child)
+        margin-top: 26px
+
+    img
+      border-radius: 5px
+
+  &__cols
+    margin: -35px -15px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__col
+    margin: 35px 15px
+    width: calc(50% - 30px)
+
+    &:nth-child(2n + 1)
+      padding-right: 30px
+
+  @media (max-width: 1140px)
+    padding: 110px 0
+
+    &__img
+      margin-bottom: 50px
+
+    &__main
+      h3
+        &:not(:last-child)
+          margin-bottom: 25px
+
+      p
+        &:not(:first-child)
+          margin-top: 22px
+
+    &__cols
+      margin-top: -25px
+      margin-bottom: -25px
+
+    &__col
+      margin-top: 25px
+      margin-bottom: 25px
+
+      &:nth-child(2n + 1)
+        padding-right: 0
+
+  @media (max-width: 991px)
+    padding: 70px 0
+
+    &__title
+      margin-bottom: 40px
+
+    &__img
+      margin-bottom: 40px
+
+    &__main
+      h3
+        &:not(:last-child)
+          margin-bottom: 22px
+
+      p
+        &:not(:first-child)
+          margin-top: 18px
+
+    &__cols
+      margin: -15px 0
+
+    &__col
+      margin: 15px 0
+      width: 100%
+
+  @media (max-width: 767px)
+    padding: 55px 0
+
+    &__title
+      margin-bottom: 30px
+
+    &__img
+      margin-bottom: 30px
+      min-height: 300px
+
+    &__main
+      h3
+        &:not(:last-child)
+          margin-bottom: 18px
+
+      p
+        &:not(:first-child)
+          margin-top: 14px
+
+    &__cols
+      margin: -10px 0
+
+    &__col
+      margin: 10px 0
+
+  @media (max-width: 480px)
+    &__img
+      min-height: 220px

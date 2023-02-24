@@ -1,0 +1,414 @@
+extends layouts/_layout.pug
+
+block vars
+
+block title
+	| Главная
+
+block content
+	main.main#main
+		section.banner
+			.container
+				.banner__content
+					.banner__info
+						h1.title2 Автоматические паровые стерилизаторы c режимом обработки растворов и питательных сред
+						p.text.text--gray.banner__text Cтерилизатор представлен в горизонтальном и вертикальном исполнении
+						button.btn.banner__btn.js-open-popup(data-popup-name="callback") Запросить цену
+					.banner__products
+						.banner-product.banner__product
+							button.banner-product__btn.js-open-popup(data-popup-name="product-1")
+								span.banner-product__name СПГА-100-1-НН
+								span.banner-product__btn-icon
+									+icon('plus')
+							img.banner-product__img(src="assets/img/banner-section/product-1.png" alt="")
+						.banner-product.banner__product
+							button.banner-product__btn.js-open-popup(data-popup-name="product-1")
+								span.banner-product__name СПВА-75-1-НН
+								span.banner-product__btn-icon
+									+icon('plus')
+							img.banner-product__img(src="assets/img/banner-section/product-2.png" alt="")
+		section.features 
+			.container 
+				.features__content
+					h2.title1 Преимущества
+					.features__list
+						.feature.features__item
+							span.feature__num 01
+							p.feature__title Автоматический
+							p.text.text--gray.feature__text Микропроцессорное управление и контроль за процессом стерилизации выполняется на всех этапах цикла стерилизации.
+						.feature.features__item
+							span.feature__num 02
+							p.feature__title Универсальный
+							p.text.text--gray.feature__text Предназначен для стерилизации любых типов изделий с твёрдой, пористой и полой структурой, а также растворов и питательных сред.
+						.feature.features__item
+							span.feature__num 03
+							p.feature__title Программируемые режимы
+							p.text.text--gray.feature__text Установленные режимы позволяют как сокращать, так и увеличивать время стерилизации, осуществлять выбор температуры и времени. Предусмотрен быстрый пятиминутный режим и свободно программируемые режимы. 
+						.feature.features__item
+							span.feature__num 04
+							p.feature__title Опции и комплектующие
+							p.text.text--gray.feature__text Подъёмное устройство, USB-порт для записи и последующей распечатки протоколов стерилизации, устройство для стерилизации текучим паром (аптечный режим), стерилизационные корзины, модуль для циркуляции воды – для экономии потребления.
+						.feature.features__item
+							span.feature__num 05
+							p.feature__title Российское производство
+							p.text.text--gray.feature__text Оборудование в стандартной комплектации и запчасти всегда в наличии на нашем собственном складе.
+
+		section.video.main__video
+			.container
+				.video__content
+					h2.title1.video__title Подъёмное устройство
+					.video-player
+						.video-player__video(data-src="https://www.youtube.com/embed/Gx543KbuGFY?autoplay=1")
+						.video-player__wrapper
+							img.video-player__bg(src="assets/img/video-bg.jpg" alt="")
+							button.play-btn.video-player__btn
+							span.video-player__text Видео работы подъёмного устройства
+
+		section.scope.scope--sphere.main__scope
+			.container
+				.scope__content
+					.scope__info
+						h2.title1.scope__title Широкая сфера применения
+						.scope__text.text.text--gray
+							p Универсальный паровой стерилизатор российского производства, предназначен для стерилизации любых типов изделий с твёрдой, пористой и полой структурой, а также растворов и питательных сред.
+							p Прекрасно подходит для лабораторий, микробиологии, чистых помещений, фармацевтической промышленности и ветеринарии.
+					.sphere.scope__sphere
+						img.sphere__img(src="assets/img/scope/img.png" alt="")
+						.sphere__list
+							.sphere__item
+								.sphere__item-icon
+									img(src="assets/img/scope/items/pharmacy.svg" alt="")
+								span.sphere__item-text Фармацевтическая промышленность
+							.sphere__item
+								.sphere__item-icon
+									img(src="assets/img/scope/items/veterinary.svg" alt="")
+								span.sphere__item-text Ветеринария
+							.sphere__item
+								.sphere__item-icon
+									img(src="assets/img/scope/items/clean.svg" alt="")
+								span.sphere__item-text Чистые #[br] помещения
+							.sphere__item
+								.sphere__item-icon
+									img(src="assets/img/scope/items/biology.svg" alt="")
+								span.sphere__item-text Микробиология
+							.sphere__item
+								.sphere__item-icon
+									img(src="assets/img/scope/items/laboratory.svg" alt="")
+								span.sphere__item-text Лаборатории
+
+		section.products.main__products#products
+			.container
+				.products__content
+					h2.title1.products__title Продукция
+					.products__list-header
+						h3.title3 Стерилизаторы
+					.products__list
+						.product-card.product-card--row.products__item.products__item--col-6.js-open-popup(data-popup-name="product-1" data-popup-extend="swiper-pagination-bullet")
+							.product-card__slider.swiper
+								.swiper-wrapper
+									.swiper-slide
+										img(src="assets/img/products/1/1.png" alt="")    
+									.swiper-slide
+										img(src="assets/img/products/1/2.png" alt="")    
+									.swiper-slide
+										img(src="assets/img/products/1/3.png" alt="")    
+									.swiper-slide
+										img(src="assets/img/products/1/4.png" alt="")    
+								.product-card__pagination
+							.product-card__info
+								p.text.product-card__text Вертикальный паровой автоматический медицинский форвакуумный стерилизатор
+								h4.title4.product-card__name СПВА-75-1-НН
+								button.btn.product-card__btn.js-open-popup(data-popup-name="callback") Запросить цену
+						.product-card.product-card--row.products__item.products__item--col-6.js-open-popup(data-popup-name="product-1" data-popup-extend="swiper-pagination-bullet")
+							.product-card__slider.swiper
+								.swiper-wrapper
+									.swiper-slide
+										img(src="assets/img/products/2.png" alt="")    
+									.swiper-slide
+										img(src="assets/img/products/1/1.png" alt="")    
+									.swiper-slide
+										img(src="assets/img/products/1/2.png" alt="")    
+									.swiper-slide
+										img(src="assets/img/products/1/3.png" alt="")    
+									.swiper-slide
+										img(src="assets/img/products/1/4.png" alt="")
+								.product-card__pagination
+							.product-card__info
+								p.text.product-card__text Вертикальный паровой автоматический медицинский форвакуумный стерилизатор
+								h4.title4.product-card__name СПВА-75-1-НН
+								button.btn.product-card__btn.js-open-popup(data-popup-name="callback") Запросить цену
+
+					.products__list-header
+						h3.title3 Комплектующие
+						.products__controls
+							button.btn-prev.products__slider-prev
+								+icon('next')
+							button.btn-next.products__slider-next
+								+icon('next')
+					.products__slider.swiper
+						.swiper-wrapper
+							.swiper-slide
+								.product-card.products__slide-item.js-open-popup(data-popup-name="product-2")
+									.product-card__img
+										img(src="assets/img/products/3.png" alt="")
+									.product-card__info
+										p.text.product-card__text Устройство подъемное для&nbsp;стерилизатора СПВА‑75‑1‑НН
+										button.btn.product-card__btn.js-open-popup(data-popup-name="callback") Запросить цену
+							.swiper-slide
+								.product-card.products__slide-item.js-open-popup(data-popup-name="product-2")
+									.product-card__img
+										img(src="assets/img/products/4.png" alt="")
+									.product-card__info
+										p.text.product-card__text Парогаситель к&nbsp;паровым&nbsp;стерилизаторам НКМР.494721.001
+										button.btn.product-card__btn.js-open-popup(data-popup-name="callback") Запросить цену
+							.swiper-slide
+								.product-card.products__slide-item.js-open-popup(data-popup-name="product-2")
+									.product-card__img
+										img(src="assets/img/products/5.png" alt="")
+									.product-card__info
+										p.text.product-card__text Подставки для стерилизации&nbsp;растворов НТЦ-690 / НТЦ-843 / НТЦ-791
+										button.btn.product-card__btn.js-open-popup(data-popup-name="callback") Запросить цену
+							.swiper-slide
+								.product-card.products__slide-item.js-open-popup(data-popup-name="product-2")
+									.product-card__img
+										img(src="assets/img/products/6.png" alt="")
+									.product-card__info
+										p.text.product-card__text Модуль циркуляции воды #[br] для паровых стерилизаторов НКМР.062811.001
+										button.btn.product-card__btn.js-open-popup(data-popup-name="callback") Запросить цену
+							.swiper-slide
+								.product-card.products__slide-item.js-open-popup(data-popup-name="product-2")
+									.product-card__img
+										img(src="assets/img/products/7.png" alt="")
+									.product-card__info
+										p.text.product-card__text Фирменная подставка С-100&nbsp;НКМР.301421.014 под&nbsp;СПГА-100-1-НН
+										button.btn.product-card__btn.js-open-popup(data-popup-name="callback") Запросить цену
+							.swiper-slide
+								.product-card.products__slide-item.js-open-popup(data-popup-name="product-2")
+									.product-card__img
+										img(src="assets/img/products/8.png" alt="")
+									.product-card__info
+										p.text.product-card__text Корзина стерилизационная для стерилизатора СПГА-100-1-НН
+										button.btn.product-card__btn.js-open-popup(data-popup-name="callback") Запросить цену
+							.swiper-slide
+								.product-card.products__slide-item.js-open-popup(data-popup-name="product-2")
+									.product-card__img
+										img(src="assets/img/products/9.png" alt="")
+									.product-card__info
+										p.text.product-card__text Кассета с лотками для стерилизации медицинских инструментов и материалов
+										button.btn.product-card__btn.js-open-popup(data-popup-name="callback") Запросить цену
+							.swiper-slide
+								.product-card.products__slide-item.js-open-popup(data-popup-name="product-2")
+									.product-card__img
+										img(src="assets/img/products/10.png" alt="")
+									.product-card__info
+										p.text.product-card__text Устройство для стерилизации текучим паром для СПВА-75-1-НН
+										button.btn.product-card__btn.js-open-popup(data-popup-name="callback") Запросить цену
+
+		section.companies#companies
+			.container
+				.companies__content
+					h2.title1.companies__title Нам доверяют
+					.companies__list
+						.companies__item
+							.companies__item-img
+								img(src="assets/img/companies/tion.png" alt="")
+						.companies__item
+							.companies__item-img
+								img(src="assets/img/companies/erroplast.png" alt="")
+						.companies__item
+							.companies__item-img
+								img(src="assets/img/companies/schiller.png" alt="")
+						.companies__item
+							.companies__item-img
+								img(src="assets/img/companies/cardioline.png" alt="")
+						.companies__item
+							.companies__item-img
+								img(src="assets/img/companies/tves.png" alt="")
+						.companies__item
+							.companies__item-img
+								img(src="assets/img/companies/trans-signal.png" alt="")
+						.companies__item
+							.companies__item-img
+								img(src="assets/img/companies/emo.png" alt="")
+						.companies__item
+							.companies__item-img
+								img(src="assets/img/companies/spds.png" alt="")
+						.companies__item
+							.companies__item-img
+								img(src="assets/img/companies/tagler.png" alt="")
+						.companies__item
+							.companies__item-img
+								img(src="assets/img/companies/axion.png" alt="")
+						.companies__item
+							.companies__item-img
+								img(src="assets/img/companies/stegler.png" alt="")
+						.companies__item
+							.companies__item-img
+								img(src="assets/img/companies/sktb.png" alt="")
+
+		section.letters
+			.container
+				.letters__content
+					.letters__header
+						h3.title3 Рекомендательные письма
+						.letters__controls
+							button.btn-prev.btn-prev--light.letters__slider-prev
+								+icon('next')
+							button.btn-next.btn-next--light.letters__slider-next
+								+icon('next')
+					.letters__slider.swiper.igallery
+						.swiper-wrapper
+							.swiper-slide.letters__slide.igallery__btn
+								img.igallery__img(src="assets/img/letters/1.jpg" alt="")
+								.letters__backdrop
+									.letters__backdrop-btn
+										+icon('plus')
+							.swiper-slide.letters__slide.igallery__btn
+								img.igallery__img(src="assets/img/letters/2.jpg" alt="")
+								.letters__backdrop
+									.letters__backdrop-btn
+										+icon('plus')
+							.swiper-slide.letters__slide.igallery__btn
+								img.igallery__img(src="assets/img/letters/3.jpg" alt="")
+								.letters__backdrop
+									.letters__backdrop-btn
+										+icon('plus')
+							.swiper-slide.letters__slide.igallery__btn
+								img.igallery__img(src="assets/img/letters/4.jpg" alt="")
+								.letters__backdrop
+									.letters__backdrop-btn
+										+icon('plus')
+							.swiper-slide.letters__slide.igallery__btn
+								img.igallery__img(src="assets/img/letters/1.jpg" alt="")
+								.letters__backdrop
+									.letters__backdrop-btn
+										+icon('plus')
+							.swiper-slide.letters__slide.igallery__btn
+								img.igallery__img(src="assets/img/letters/2.jpg" alt="")
+								.letters__backdrop
+									.letters__backdrop-btn
+										+icon('plus')
+							.swiper-slide.letters__slide.igallery__btn
+								img.igallery__img(src="assets/img/letters/3.jpg" alt="")
+								.letters__backdrop
+									.letters__backdrop-btn
+										+icon('plus')
+							.swiper-slide.letters__slide.igallery__btn
+								img.igallery__img(src="assets/img/letters/4.jpg" alt="")
+								.letters__backdrop
+									.letters__backdrop-btn
+										+icon('plus')
+
+		section.terms#terms
+			.container
+				.terms__content
+					h2.title1.terms__title Условия работы
+					.terms__list
+						.term.terms__item
+							.term__icon
+								img(src="assets/img/terms/date.svg" alt="")
+							h3.title3.term__title Короткие сроки #[br] поставки
+							p.text.text--small.text--gray.term__text Собственное производство позволяет нам гарантировать наличие товара на складе и в короткие сроки поставлять продукцию.
+						.term.terms__item
+							.term__icon
+								img(src="assets/img/terms/storage.svg" alt="")
+							h3.title3.term__title Собственный #[br] склад запчастей
+							p.text.text--small.text--gray.term__text Собственный склад оригинальных запчастей, даёт возможность максимально оперативно производить гарантийный ремонт.
+						.term.terms__item
+							.term__icon
+								img(src="assets/img/terms/iso.svg" alt="")
+							h3.title3.term__title Работа по системе ИСО
+							p.text.text--small.text--gray.term__text Придерживаясь международных стандартов качества, мы организовали продуктивную работу и высокий уровень сервиса.
+						.term.terms__item
+							.term__icon
+								img(src="assets/img/terms/support.svg" alt="")
+							h3.title3.term__title Сервисная поддержка с помощью чат-бота
+							p.text.text--small.text--gray.term__text Сервисная поддержка чат-бота может помочь быстро решить часть вопросов и технических проблем пользователю самостоятельно.
+						.term.terms__item
+							.term__icon
+								img(src="assets/img/terms/warranty.svg" alt="")
+							h3.title3.term__title Расширенная гарантия
+							p.text.text--small.text--gray.term__text Мы уверены в качестве продукции, поэтому предоставляем расширенную гарантию на сервисное обслуживание до 5 лет.
+						.term.terms__item
+							.term__icon
+								img(src="assets/img/terms/service.svg" alt="")
+							h3.title3.term__title Развитая сервисная сеть
+							p.text.text--small.text--gray.term__text Собственная сервисная сеть  соответствует максимально высоким стандартам качества и обеспечивает постоянную поддержку.
+
+		section.about#about
+			.container
+				.about__content
+					h2.title1.about__title О компании
+					img.about__img(src="assets/img/about/1.jpg" alt="")
+					.about__main
+						.about__cols
+							.about__col
+								h3 Компания «Амедис Инжиниринг» — дистрибьютор&nbsp;лабораторного оборудования на&nbsp;территории России и в странах СНГ
+							.about__col
+								p Мы тесно сотрудничаем с лабораториями Центра гигиены и эпидемиологии, управлениями Роспотребнадзора и Ветеринарии и лабораториями контроля качества на пищевых производствах. Производим и обслуживаем надёжное и современное оборудование, оказываем полный комплекс сервисных услуг, постоянно поддерживая высокий уровень сервиса.
+							.about__col
+								img(src="assets/img/about/2.jpg" alt="")
+							.about__col.pt-lg-12
+								h3 Качество и сервис
+								p Наша основная задача предоставить покупателю высокий уровень сервиса и обеспечить продукцией надлежащего качества по выгодным ценам, путем тесного сотрудничества и заключения прямых договоров с производителем.
+								p Предлагаем только качественную и проверенную продукцию собственного производства и отечественных производителей, европейскую аппаратуру и надёжные комплектующие. Все изделия имеют сертификаты соответствия и государственную лицензию от производителей мед техники и занесены в госреестр Минздрава РФ.
+
+		section.callback
+			.container
+				.callback__content
+					.callback__info
+						h3.title1.callback__title Отправьте запрос
+						p.text.text--gray.callback__text Наши специалисты свяжутся с вами в ближайшее время и ответят на все интересующие вопросы
+					form.form.callback__form(action="#" method="POST" autocomplete="off") 
+						.form__item
+							input.input.form__input(type="text" placeholder="Контактное лицо")
+						.form__items
+							.form__item
+								input.input.form__input(type="text" placeholder="Организация")
+							.form__item
+								input.input.form__input(type="text" placeholder="Город")
+						.form__items
+							.form__item
+								input.input.form__input(type="text" placeholder="E-mail")
+							.form__item
+								input.input.form__input(type="text" placeholder="Телефон")
+						.form__item
+							input.input.form__input(type="text" placeholder="Сообщение")
+						label.checkbox.form__checkbox
+							input.checkbox__input(type="checkbox")
+							span.checkbox__switch
+								+icon('check')
+							span.checkbox__text Согласие на обработку персональных данных, а также согласие с политикой конфиденциальности
+						button.btn.form__btn Отправить запрос
+						
+		section.news#news
+			.container
+				.news__content
+					h2.title1.news__title Новости
+					.news__list
+						.news-item.news__item
+							.news-item__row
+								.text.text--gray.news-item__date 15/04/2022
+								.news-item__img
+									img(src="assets/img/news/1.jpg", alt="")
+								.news-item__info
+									h3.title4.news-item__title Программа «Расширенная гарантия» #[br] от АО «Транс-Сигнал» на паровые стерилизаторы
+									p.text.text--gray.news-item__text ООО «Амедис Инжиниринг» совместно с крупнейшим производителем паровых стерилизаторов АО «Транс-Сигнал» предлагают новую программу «Расширенная гарантия» с максимальным сроком гарантии до 5 лет.
+						.news-item.news__item
+							.news-item__row
+								.text.text--gray.news-item__date 15/04/2022
+								.news-item__img
+									img(src="assets/img/news/2.jpg", alt="")
+								.news-item__info
+									h3.title4.news-item__title Системы обеззараживания медицинских #[br] отходов «Бионар»
+									p.text.text--gray.news-item__text Мы непрерывно работаем над расширением ассортимента на нашем сайте, и с радостью сообщаем о поступлении новых моделей утилизаторов СВЧ и пресс-деструкторов компании «Бионар».
+						.news-item.news__item
+							.news-item__row
+								.text.text--gray.news-item__date 15/04/2022
+								.news-item__img
+									img(src="assets/img/news/3.jpg", alt="")
+								.news-item__info
+									h3.title4.news-item__title Дистилляторы компании RAYPA
+									p.text.text--gray.news-item__text ООО «Амедис Инжиниринг» предлагает Вашему вниманию лабораторное оборудование испанской компании RAYPA для проведения анализа азота.  Дистилляторы и дигесторы разработаны с учетом высоких требований европейских стандартов и способны проводить сверхточный анализ
+					.news__footer
+						button.link-line.news__more Показать ещё

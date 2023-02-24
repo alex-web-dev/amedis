@@ -1,0 +1,157 @@
+.sphere
+  position: relative
+  background: url('../img/scope/circle.svg') center / contain no-repeat
+  width: 726px
+  height: 746px
+
+  &__img
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+  &__list
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+
+  &__item
+    position: absolute
+    display: flex
+    align-items: center
+
+    &:nth-child(5)
+      right: -180px
+      top: 57px
+
+    &:nth-child(4)
+      right: -273px
+      top: 300px
+
+    &:nth-child(3)
+      right: -180px
+      bottom: 50px
+
+    &:nth-child(2)
+      flex-direction: column
+      right: 274px
+      bottom: -87px
+
+      .sphere__item-text
+        margin-left: 0
+        margin-top: -7px
+        text-align: center
+
+    &:nth-child(1)
+      left: -188px
+      bottom: 50px
+
+      .sphere__item-text
+        margin-left: 0
+        order: -1
+        text-align: right
+
+  &__item-icon
+    position: relative
+    width: 140px
+    height: 140px
+    flex: 0 0 auto
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #fff
+    border-radius: 50%
+
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      border-radius: 50%
+
+    &:before
+      width: 108px
+      height: 108px
+      border: 2px solid rgba(#00b5e5, 0.2)
+
+    &:after
+      width: 76px
+      height: 76px
+      background-color: #00b5e5
+
+    img
+      position: relative
+      z-index: 1
+
+  &__item-text
+    margin-left: 8px
+    width: 200px
+    font-size: 21px
+    font-weight: 500
+    line-height: 1.3
+
+  @media (max-width: 991px)
+    &__list
+      transform: translateX(-5px)
+
+    &__item-text
+      margin-left: 3px
+
+  @media (max-width: 767px)
+    background: none
+    width: auto
+    height: auto
+
+    &__img
+      display: none
+
+    &__list
+      position: static
+      display: flex
+      flex-wrap: wrap
+
+    &__item
+      position: static
+      width: 50%
+
+      &:nth-child(1)
+        .sphere__item-text
+          margin-left: 8px
+          order: 0
+          text-align: left
+
+      &:nth-child(2)
+        flex-direction: row
+
+        .sphere__item-text
+          margin-top: 0
+          margin-left: 8px
+
+    &__item-icon
+      width: 87.5px
+      height: 87.5px
+
+      &:before
+        width: 70px
+        height: 70px
+
+      &:after
+        width: 47.5px
+        height: 47.5px
+
+      img
+        max-width: 25px
+        max-height: 25px
+        object-fit: contain
+
+    &__item-text
+      margin-left: 8px
+      font-size: 16px
+
+  @media (max-width: 480px)
+    &__item
+      width: 100%

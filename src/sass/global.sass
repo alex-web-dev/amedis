@@ -1,0 +1,290 @@
+.body
+  &--lock
+    overflow: hidden
+    
+.container
+  max-width: $container-width
+  margin: 0 auto
+  padding: 0 $container-offset
+
+.title1
+  line-height: 1.3
+  font-size: 40px
+  font-family: 'Stapel', sans-serif
+  text-transform: uppercase
+  font-weight: 500
+
+.title2
+  font-size: 30px
+  line-height: 1.35
+  font-family: 'Stapel', sans-serif
+  text-transform: uppercase
+  font-weight: 500
+
+.title3
+  line-height: 1.4
+  font-size: 24px
+  font-weight: 500
+
+.title4
+  font-size: 21px
+  line-height: 1.4
+  font-weight: 600
+
+.text
+  font-size: 17px
+  line-height: 1.5
+
+  &--gray
+    color: $color-gray
+
+  &--small
+    font-size: 15px
+
+.btn
+  padding: 15px 53px 18px
+  background-color: $color-primary
+  color: #fff
+  border-radius: 5px
+  font-size: 17px
+  line-height: 1
+  font-weight: 500
+  transition: color .3s, background .3s, border .3s
+
+  &:hover
+    background-color: $color-primary-dark
+
+.btn-next,
+.btn-prev
+  width: 50px
+  height: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 50%
+  transition: background .3s
+
+  &:hover
+    background-color: $color-light
+
+  svg
+    width: 14px
+    height: 14px
+    stroke: $color-primary
+
+  &--light
+    &:hover
+      background-color: #e8e9eb
+
+  &--white
+    &:hover
+      background: rgba($color-dark, 0.8)
+    svg
+      stroke: #fff
+
+.btn-prev
+  svg
+    transform: rotate(180deg)
+
+.link
+  transition: color .3s
+
+  &:hover
+    color: $color-primary
+
+.link-line,
+.link-icon span
+  position: relative
+  transition: color .3s
+
+  &:hover
+    color: $color-gray
+
+    &:after
+      background-color: $color-gray
+
+  &:after
+    content: ''
+    position: absolute
+    bottom: -2px
+    left: 0
+    background-color: $color-dark
+    height: 1px
+    width: 100%
+    transition: background-color .3s
+
+.link-icon
+  display: flex
+  align-items: center
+  font-size: 15px
+
+  &:hover
+    color: $color-gray
+
+  &__img
+    width: 23px
+    height: 23px
+
+    &:first-child
+      margin-right: 14px
+
+    &:not(:first-child)
+      margin-left: 14px
+
+.input,
+.select__field
+  padding: 15px 0 18px
+  font-size: 17px
+  line-height: 1
+  background-color: transparent
+  border: none
+  border-bottom: 1px solid #d7dbde
+  outline: none
+
+  &::placeholder
+    color: $color-dark
+
+.select
+  position: relative
+
+  &__field
+    width: 100%
+    -webkit-appearance: none
+    appearance: none
+
+  &__icon
+    pointer-events: none
+    position: absolute
+    right: 10px
+    top: 50%
+    transform: translateY(-50%) rotate(90deg)
+    width: 18px
+    height: 18px
+    stroke: $color-dark
+
+.pt-lg-12
+  padding-top: 12px
+
+.logo
+  transition: opacity .3s
+
+  &:hover
+    opacity: 0.7
+
+  &__img
+    &--big
+      width: 210px
+
+@media (max-width: 1140px)
+  .title1
+    font-size: 36px
+
+  .title2
+    font-size: 28px
+
+  .title3
+    font-size: 22px
+
+  .title4
+    font-size: 19px
+
+  .text
+    font-size: 16px
+
+    &--small
+      font-size: 14px
+
+  .btn
+    font-size: 16px
+
+  .logo
+    &__img
+      max-width: 135px
+
+      &--big
+        max-width: 180px
+
+  .input
+    padding: 14px 0 16px
+    font-size: 16px
+
+@media (max-width: 991px)
+  .title1
+    font-size: 32px
+
+  .title2
+    font-size: 24px
+
+  .title3
+    font-size: 20px
+
+  .title4
+    font-size: 18px
+
+  .text
+    font-size: 15px
+
+  .btn
+    font-size: 15px
+    padding: 13px 42px 15px
+
+  .input
+    padding: 12px 0 14px
+    font-size: 15px
+
+  .link-icon
+    font-size: 14px
+
+    &__img
+      width: 20px
+      height: 20px
+
+      &:first-child
+        margin-right: 11px
+
+      &:not(:first-child)
+        margin-left: 11px
+
+  .pt-lg-12
+    padding-top: 0
+
+  .logo
+    &__img
+      &--big
+        max-width: 165px
+
+@media (max-width: 767px)
+  .title1
+    font-size: 28px
+
+  .title2
+    font-size: 22px
+
+  .title3
+    font-size: 18px
+
+  .title4
+    font-size: 16px
+
+  .text
+    font-size: 14px
+
+  .btn
+    font-size: 14px
+
+  .btn-next,
+  .btn-prev
+    width: 30px
+    height: 30px
+
+    svg
+      width: 10.5px
+      height: 10.5px
+
+  .input
+    padding: 10px 0 12px
+    font-size: 14px
+
+@media (max-width: 480px)
+  .title1
+    font-size: 24px

@@ -1,0 +1,95 @@
+.video-player
+  position: relative
+
+  &__video
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+
+    iframe
+      width: 100%
+      height: 100%
+
+  &__wrapper
+    position: relative
+    z-index: 3
+
+    &:before
+      content: ''
+      background: rgba($color-dark, 0.6)
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+
+  &__bg
+    display: block
+
+  &__btn
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100px
+    height: 100px
+    border-radius: 50%
+    background: rgba(#fff, 0.7)
+
+    &:before
+      content: ''
+      display: inline-block
+      border: 17px solid transparent
+      border-left: 29px solid #00B5E5
+      transform: translateX(12px)
+
+  &__text
+    position: absolute
+    left: 50px
+    bottom: 40px
+    font-size: 15px
+    font-weight: 500
+    color: #fff
+
+  &--active
+    &:before
+      display: none
+
+  &--active &__wrapper
+    visibility: hidden
+    z-index: -1
+
+  @media (max-width: 991px)
+    &__btn
+      width: 80px
+      height: 80px
+
+      &:before
+        transform: translateX(10px)
+        border-width: 14px
+        border-left-width: 24px
+
+    &__text
+      left: 30px
+      bottom: 25px
+
+  @media (max-width: 767px)
+    &__btn
+      width: 60px
+      height: 60px
+
+      &:before
+        transform: translateX(7.5px)
+        border-width: 10px
+        border-left-width: 18px
+
+    &__text
+      left: 16px
+      bottom: 12px
+      font-size: 14px
