@@ -38,7 +38,8 @@ $products.forEach($product => {
   });
   
   window.addEventListener('resize', () => {
-    if (window.innerWidth >= 992 && navSlider.params.direction !== 'vertical') {
+    if ((window.innerWidth >= 992 && navSlider.params.direction !== 'vertical') || 
+        (window.innerWidth < 992 && navSlider.params.direction !== 'horizontal')) {
       navSlider.update();
     }
   });

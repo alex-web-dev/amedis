@@ -22,9 +22,7 @@ function openPopup(boxIndex, imgIndex) {
   $slider.swiper.slideTo(imgIndex, 0, false);
   $popup.classList.add('igallery-popup--hide');
   $popup.classList.add('igallery-popup--active');
-  setTimeout(() => {
-    $popup.classList.remove('igallery-popup--hide');
-  }, 10);
+  setTimeout(() => $popup.classList.remove('igallery-popup--hide'), 10);
 }
 
 function closePopup(boxIndex) {

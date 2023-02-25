@@ -52,12 +52,12 @@ window.addEventListener('load', () => {
 function clonePagination(slider) {
   const $pagination = slider.pagination.el;
   if (!$pagination) {
-    return
+    return;
   }
 
   const $oldPaginationClone = slider.el.querySelector('.swiper-pagination--clone');
   if ($oldPaginationClone !== null) {
-    $oldPaginationClone.remove()
+    $oldPaginationClone.remove();
   }
   const $newPaginationClone = $pagination.cloneNode(true);
   $newPaginationClone.classList.add('swiper-pagination--clone');

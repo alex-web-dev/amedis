@@ -2,8 +2,10 @@
   padding: 30px 0
   border-top: 1px solid #D7DBDE
   display: flex
+  counter-increment: feature
 
-  &__num
+  &:before
+    content: counter(feature, decimal-leading-zero)
     flex: 0 0 110px
     font-size: 21px
     font-weight: 500
@@ -19,7 +21,7 @@
     flex: 1 1 auto
 
   @media (max-width: 1140px)
-    &__num
+    &:before
       flex: 0 0 80px
 
     &__title
@@ -28,16 +30,16 @@
   @media (max-width: 991px)
     padding: 25px 0
 
-    &__num
+    &:before
       font-size: 19px
-    
+
     &__title
       font-size: 19px
 
   @media (max-width: 767px)
     flex-wrap: wrap
 
-    &__num
+    &:before
       flex: 0 0 40px
 
     &__title

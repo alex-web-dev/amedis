@@ -1,5 +1,4 @@
 import './menu.js';
-import './header.js';
 import './video-player.js';
 import './products.js';
 import './product-card.js';
