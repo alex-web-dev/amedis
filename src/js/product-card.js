@@ -1,7 +1,3 @@
-import Swiper, { Pagination, EffectFade } from 'swiper';
-
-Swiper.use([Pagination, EffectFade]);
-
 window.addEventListener('load', () => {
   const $productSliders = document.querySelectorAll('.product-card__slider');
   $productSliders.forEach($slider => {

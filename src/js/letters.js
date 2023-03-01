@@ -1,7 +1,3 @@
-import Swiper, { Navigation } from 'swiper';
-
-Swiper.use([Navigation]);
-
 const $lettersSections = document.querySelectorAll('.letters');
 $lettersSections.forEach($letters => {
   const $slider = $letters.querySelector('.letters__slider');

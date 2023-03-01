@@ -13,7 +13,6 @@ global.app = {
 };
 
 import { clean } from './gulp/tasks/clean.js';
-// import { html } from './gulp/tasks/html.js';
 import { pug } from './gulp/tasks/pug.js';
 import { styles } from './gulp/tasks/styles.js';
 import { scripts } from './gulp/tasks/scripts.js';

@@ -12,7 +12,7 @@ export const path = {
 		html: `${srcFolder}`,
 		pug: `${srcFolder}/pug`,
 		sass: `${srcFolder}/sass`,
-		sassEntryFile: 'styles.sass',
+		sassEntryFile: 'app.sass',
 		js: `${srcFolder}/js`,
 		jsEntryFile: 'index.js',
 		img: `${srcFolder}/img`,

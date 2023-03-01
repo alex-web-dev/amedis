@@ -1,7 +1,3 @@
-import Swiper, { Navigation } from 'swiper';
-
-Swiper.use([Navigation]);
-
 const $productsSections = document.querySelectorAll('.products');
 $productsSections.forEach($products => {
   const $slider = $products.querySelector('.products__slider');

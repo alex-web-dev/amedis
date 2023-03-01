@@ -1,7 +1,3 @@
-import Swiper, { Pagination, Navigation, Thumbs } from 'swiper';
-
-Swiper.use([Pagination, Navigation, Thumbs]);
-
 const $products = document.querySelectorAll('.product');
 $products.forEach($product => {
   const $navSlider = $product.querySelector('.product__nav-slider');

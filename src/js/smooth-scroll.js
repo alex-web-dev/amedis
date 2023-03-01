@@ -1,6 +1,3 @@
-import smoothscroll from 'smoothscroll-polyfill';
-smoothscroll.polyfill();
-
 const $anchors = document.querySelectorAll('a[href*="#"]');
 $anchors.forEach($anchor => {
   $anchor.addEventListener('click', e => {
