@@ -15,11 +15,10 @@ const sass = gulpSass(dartSass);
 export const styles = () => {
   const vendors = app.gulp.src([
     'node_modules/normalize.css/normalize.css',
-    'node_modules/swiper/swiper-bundle.min.css',
+    'node_modules/swiper/swiper-bundle.css',
   ])
-  .pipe(concatCss('vendors.min.css'))
+  .pipe(concatCss('vendors.css'))
   .pipe(gulpif(app.isProd, postcss([autoprefixer])))
-  .pipe(gulpif(app.isProd, cleanCss({ compatibility: 'ie8' })))
   .pipe(app.gulp.dest(app.path.build.css));
 
   const styles = app.gulp.src(`${app.path.src.sass}/${app.path.src.sassEntryFile}`)

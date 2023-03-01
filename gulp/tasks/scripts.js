@@ -4,11 +4,10 @@ import merge from 'merge-stream';
 
 export const scripts = () => {
   const vendors = app.gulp.src([
-    'node_modules/swiper/swiper-bundle.min.js',
-    'node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js',
+    'node_modules/swiper/swiper-bundle.js',
+    'node_modules/smoothscroll-polyfill/dist/smoothscroll.js',
   ])
-  .pipe(concat('vendors.min.js'))
-  .pipe(uglify())
+  .pipe(concat('vendors.js'))
   .pipe(app.gulp.dest(app.path.build.js));
 
   const scripts = app.gulp.src([
