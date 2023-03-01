@@ -15,7 +15,6 @@ export const scripts = () => {
     `${app.path.src.js}/*.js`
   ])
   .pipe(concat('app.js'))
-  .pipe(uglify())
   .pipe(app.gulp.dest(app.path.build.js));
 
   return merge(vendors, scripts);

@@ -25,10 +25,10 @@ export const styles = () => {
   const styles = app.gulp.src(`${app.path.src.sass}/${app.path.src.sassEntryFile}`)
     .pipe(gulpif(app.isDev, sourcemaps.init()))
     .pipe(sass({
-      importer: tildeImporter
+      importer: tildeImporter,
+      outputStyle: 'expanded'
     }).on('error', sass.logError))
     .pipe(gulpif(app.isProd, postcss([autoprefixer])))
-    .pipe(gulpif(app.isProd, cleanCss({ compatibility: 'ie8' })))
     .pipe(gulpif(app.isDev, sourcemaps.write()))
     .pipe(app.gulp.dest(app.path.build.css))
     .pipe(browserSync.stream());
