@@ -7,18 +7,30 @@ import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import gulpif from 'gulp-if';
 import browserSync from 'browser-sync';
+import merge from 'merge-stream';
+import concatCss from 'gulp-concat-css';
 
 const sass = gulpSass(dartSass);
 
 export const styles = () => {
-  return app.gulp.src(`${app.path.src.sass}/${app.path.src.sassEntryFile}`)
+  const vendors = app.gulp.src([
+    'node_modules/normalize.css/normalize.css',
+    'node_modules/swiper/swiper-bundle.css',
+  ])
+  .pipe(concatCss('vendors.css'))
+  .pipe(gulpif(app.isProd, postcss([autoprefixer])))
+  .pipe(app.gulp.dest(app.path.build.css));
+
+  const styles = app.gulp.src(`${app.path.src.sass}/${app.path.src.sassEntryFile}`)
     .pipe(gulpif(app.isDev, sourcemaps.init()))
     .pipe(sass({
-      importer: tildeImporter
+      importer: tildeImporter,
+      outputStyle: 'expanded'
     }).on('error', sass.logError))
     .pipe(gulpif(app.isProd, postcss([autoprefixer])))
-    .pipe(gulpif(app.isProd, cleanCss({ compatibility: 'ie8' })))
     .pipe(gulpif(app.isDev, sourcemaps.write()))
     .pipe(app.gulp.dest(app.path.build.css))
     .pipe(browserSync.stream());
+
+    return merge(vendors, styles);
 }

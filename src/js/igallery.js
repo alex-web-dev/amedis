@@ -1,21 +1,17 @@
-import Swiper, { Pagination } from 'swiper';
-
-Swiper.use([Pagination]);
-
 const $boxes = document.querySelectorAll('.igallery');
 $boxes.forEach(($galleryBox, boxIndex) => {
   const duration = $galleryBox.dataset.duration ? $galleryBox.dataset.duration : 400;
-  createPopup($galleryBox, boxIndex, duration);
+  createGalleryPopup($galleryBox, boxIndex, duration);
 
   const $btns = $galleryBox.querySelectorAll('.igallery__btn');
   $btns.forEach(($btn, index) => {
     $btn.addEventListener('click', () => {
-      openPopup(boxIndex, index);
+      openGalleryPopup(boxIndex, index);
     })
   })
 });
 
-function openPopup(boxIndex, imgIndex) {
+function openGalleryPopup(boxIndex, imgIndex) {
   const $popup = document.querySelectorAll('.igallery-popup')[boxIndex];
   const $slider = $popup.querySelector('.igallery-popup__slider');
 
@@ -25,7 +21,7 @@ function openPopup(boxIndex, imgIndex) {
   setTimeout(() => $popup.classList.remove('igallery-popup--hide'), 10);
 }
 
-function closePopup(boxIndex) {
+function closeGalleryPopup(boxIndex) {
   const $popup = document.querySelectorAll('.igallery-popup')[boxIndex];
 
   $popup.classList.add('igallery-popup--hide');
@@ -35,7 +31,7 @@ function closePopup(boxIndex) {
   }, 400);
 }
 
-function createPopup($galleryBox, boxIndex, duration) {
+function createGalleryPopup($galleryBox, boxIndex, duration) {
   const $popup = document.createElement('div');
   $popup.className = 'igallery-popup';
   $popup.style.transitionDuration = `${duration}ms`;
@@ -92,5 +88,5 @@ function createPopup($galleryBox, boxIndex, duration) {
   });
 
   const $close = $popup.querySelector('.igallery-popup__close');
-  $close.addEventListener('click', () => closePopup(boxIndex));
+  $close.addEventListener('click', () => closeGalleryPopup(boxIndex));
 }
