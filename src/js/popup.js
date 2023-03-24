@@ -21,13 +21,17 @@ $openBtns.forEach($btn => {
   });
 });
 
-const $popups = document.querySelectorAll('.popup');
-$popups.forEach($popup => {
-  const $closeBtn = $popup.querySelector('.popup__close');
-  $closeBtn.addEventListener('click', () => closePopup($popup));
+window.addEventListener('load', () => {
+  const $popups = document.querySelectorAll('.popup');
+  $popups.forEach($popup => {
+    $popup.classList.add('popup--loaded');
 
-  const $backdrop = $popup.querySelector('.popup__backdrop');
-  $backdrop.addEventListener('click', () => closePopup($popup));
+    const $closeBtn = $popup.querySelector('.popup__close');
+    $closeBtn.addEventListener('click', () => closePopup($popup));
+
+    const $backdrop = $popup.querySelector('.popup__backdrop');
+    $backdrop.addEventListener('click', () => closePopup($popup));
+  });
 });
 
 function openPopup($popup) {
